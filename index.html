@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Management - Welcome</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            overflow-x: hidden;
+        }
+        
+        .marquee-container {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            height: 150px;
+            margin-top: 20px;
+        }
+        
+        .marquee {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+        }
+        
+        .marquee2 {
+            display: inline-block;
+            animation: marquee2 22s linear infinite;
+            margin-top: 20px;
+        }
+        
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        @keyframes marquee2 {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+        }
+        
+        .marquee img {
+            height: 150px;
+            margin: 0 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+        
+        .logo-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .logo {
+            height: 120px;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+            transition: all 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .welcome-text {
+            text-align: center;
+            padding: 0 20px;
+            margin-bottom: 40px;
+        }
+        
+        .welcome-text h1 {
+            color: #4a6fa5;
+            margin-bottom: 15px;
+            font-size: 2.2rem;
+        }
+        
+        .welcome-text p {
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        .enter-btn {
+            display: block;
+            width: 200px;
+            margin: 40px auto;
+            padding: 15px 30px;
+            background-color: #4a6fa5;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(74, 111, 165, 0.4);
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+        }
+        
+        .enter-btn:hover {
+            background-color: #3a5a8f;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(74, 111, 165, 0.6);
+        }
+        
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 0 20px 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            width: 280px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+        
+        .feature-card h3 {
+            color: #4a6fa5;
+            margin-bottom: 10px;
+        }
+        
+        .feature-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="marquee-container">
+        <div class="marquee">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4" alt="Restaurant">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5" alt="Dining">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0" alt="Food">
+            <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c" alt="Bar">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" alt="Dish">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4" alt="Restaurant">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5" alt="Dining">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0" alt="Food">
+        </div>
+    </div>
+    
+    <div class="logo-container">
+        <img src="images/logo.png" alt="Hotel Logo" class="logo">
+    </div>
+    
+    <a href="https://goingdigitalweb.vercel.app" class="enter-btn">Enter System</a>
+
+    <div class="welcome-text">
+        <h1>Welcome to Our Hotel Management System</h1>
+        <p>Experience seamless table management, order tracking, and billing solutions designed specifically for small hotels and restaurants.</p>
+    </div>
+    
+    
+    
+    <div class="features">
+        <div class="feature-card">
+            <h3>Table Management</h3>
+            <p>Easily track and manage all your tables with real-time status updates and quick order placement.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Order Tracking</h3>
+            <p>Monitor all orders from placement to delivery with our intuitive tracking system.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Automated Billing</h3>
+            <p>Generate bills automatically with itemized details and multiple payment options.</p>
+        </div>
+    </div>
+    
+    <script>
+        // You can add any JavaScript functionality here if needed
+        document.querySelector('.enter-btn').addEventListener('click', function() {
+            // Optional: Add any animation before redirecting
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                window.location.href = "https://goingdigitalweb.vercel.app";
+            }, 200);
+        });
+    </script>
+</body>
+</html>
